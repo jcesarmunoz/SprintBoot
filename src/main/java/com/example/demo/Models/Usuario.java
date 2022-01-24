@@ -6,21 +6,26 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name="Usuarios")
+@Table(name="Usuario")
 public class Usuario {
     @Id
-    @Getter  @Setter @Column(name="id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Getter  @Setter @Column(name="id")
+    private int id;
     @Getter  @Setter @Column(name="nombre")
     private String nombre;
     @Getter  @Setter @Column(name="apellido")
     private String apellido;
-    @Getter  @Setter @Column(name="email")
-    private String email;
-    @Getter  @Setter @Column(name="pass")
-    private String password;
-    @Getter  @Setter @Column(name="telefono")
-    private String telefono;
-
+    @Getter  @Setter @Column(name="tipo_documento")
+    private String tipoDocumento;
+    @Getter  @Setter @Column(name="numero_documento")
+    private String numeroDocumento;
+    @Getter  @Setter @Column(name="fecha_nacimiento")
+    private String fechaNacimiento;
+    @Getter  @Setter @Column(name="fecha_vinculacion")
+    private String fechaVinculacion;
+    @Getter  @Setter @Column(name="cargo")
+    private String cargo;
+    @Getter  @Setter @Column(name="salario")
+    private String salario;
 }

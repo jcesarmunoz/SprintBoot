@@ -7,9 +7,11 @@ import java.util.List;
 public interface UsuarioDAO {
     List<Usuario> getUsuario();
 
-    void eliminar(Long id);
+    void eliminar(int id);
 
-    void registrar(Usuario usuario);
+    String registrar(Usuario usuario);
 
     Usuario obtenerUsuarioCredenciales(Usuario usuario);
+
+    String consultarUsuario(int id);
 }
